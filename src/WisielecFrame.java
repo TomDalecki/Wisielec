@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class WisielecFrame extends JFrame {
     JFrame frame = new JFrame();
@@ -7,11 +9,13 @@ public class WisielecFrame extends JFrame {
     JPanel centralPanel = new JPanel();
     JPanel rightPanel = new JPanel();
     JLabel topLabel = new JLabel("GRA WISIELEC - ODGADNIJ SŁOWO");
-    JLabel centralLabel1 = new JLabel("Central Label", SwingConstants.CENTER);
-    JLabel centralLabel2 = new JLabel("Central Label", SwingConstants.CENTER);
+    JLabel centralLabel1 = new JLabel("", SwingConstants.CENTER);
+    JLabel centralLabel2 = new JLabel("", SwingConstants.CENTER);
+    JTextField textField = new JTextField();
+    JButton button = new JButton("OK");
 
-public WisielecFrame(){
-    frame.setTitle("Wisielec");
+public WisielecFrame() {
+    frame.setTitle("Gra Wisielec");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setSize(800, 600);
     frame.setBackground(Color.lightGray);
@@ -33,9 +37,15 @@ public WisielecFrame(){
 
     // Central Panel
     centralPanel.setBackground(Color.cyan);
-    centralPanel.setLayout(new GridLayout(5, 0));
+    centralPanel.setLayout(new GridLayout(4, 0));
+    centralLabel1.setFont(new Font("Arial", Font.PLAIN, 20));
+    centralLabel2.setFont(new Font("Arial", Font.BOLD, 30));
+    textField.setBackground(Color.white);
     centralPanel.add(centralLabel1);
     centralPanel.add(centralLabel2);
+    centralPanel.add(textField);
+    centralPanel.add(button);
+    //button.addActionListener(this);
     mainContainer.add(centralPanel);
 
     // Right Panel
@@ -46,4 +56,14 @@ public WisielecFrame(){
     frame.add(mainContainer);
     frame.setVisible(true);
     }
+
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//
+//    }
+
+
+
+
+
 }
