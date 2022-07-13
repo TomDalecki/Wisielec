@@ -46,12 +46,11 @@ public void wordDraw(){
     System.out.println(wordToGuess);
 }
 public void wordGuessing() {
-
     String letterChosen = wisielecFrame.textField.getText();
-    System.out.println("Tablica: "+ lettersGuessed);
 
-    if (wordToGuessLowCa.indexOf(letterChosen) >= 0) {
+    if (wordToGuessLowCa.contains(letterChosen)) {
         System.out.println("Świetnie!, litera znajduje się w imieniu do odgadnięcia");
+        wisielecFrame.textField.setText("");
 
         for (int i = 0; i<lettersFromWordToGuess.size(); i++) {
 
@@ -59,16 +58,16 @@ public void wordGuessing() {
                 lettersGuessed.set(i, letterChosen);
             }
         }
-        wisielecFrame.centralLabel2.setText(String.valueOf(lettersGuessed));
-
+        wisielecFrame.centralLabel2.setText(toString());
 
     } else {
         System.out.println("Litera nie znajduje się w imieniu do odgadnięcia");
+        wisielecFrame.textField.setText("");
     }
-
 }
-
-
+public String toString(){
+  return String.valueOf(lettersGuessed);
+}
     @Override
     public void actionPerformed(ActionEvent e) {
     wordGuessing();}
