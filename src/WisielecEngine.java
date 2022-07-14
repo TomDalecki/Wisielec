@@ -8,11 +8,13 @@ Random randomWord = new Random();
 ArrayList<Character> lettersFromWordToGuess = new ArrayList<>();
 ArrayList<String> lettersGuessed = new ArrayList<>();
 WisielecFrame wisielecFrame = new WisielecFrame();
-String[][] wordsBase = {{"Zoya"}, {"Norek"}, {"Frida"}, {"Louis"}, {"Pedro"}};
+    String[][] wordsBase = {{"ab"}};
+//String[][] wordsBase = {{"Zoya"}, {"Norek"}, {"Frida"}, {"Louis"}, {"Pedro"}};
 String wordToGuess;
 String wordToGuessLowCa;
 boolean chanceToGuess = true;
-int wrongAnswerCounter= 1;
+int wrongAnswerCounter = 1;
+int correctAnswerCounter = 1;
 
     public void wisielecEngine(){
     try {
@@ -53,27 +55,42 @@ if (chanceToGuess){
     String letterChosen = wisielecFrame.textField.getText();
  if(!letterChosen.equals("")){
     if (wordToGuessLowCa.contains(letterChosen)) {
-        System.out.println("Świetnie!, litera znajduje się w imieniu do odgadnięcia");
+        wisielecFrame.centralLabel1.setText("Świetnie!, litera znajduje się w imieniu do odgadnięcia");
         wisielecFrame.textField.setText("");
 
+        //tu sprawdzam ile razy dana litera występuje w słowie
         for (int i = 0; i<lettersFromWordToGuess.size(); i++) {
             if (letterChosen.equals(Character.toString(lettersFromWordToGuess.get(i)))){
                 lettersGuessed.set(i, letterChosen);
             }
         }
         wisielecFrame.centralLabel2.setText(printArray());
+        correctAnswerCheck(correctAnswerCounter++);
 
     } else {
-        System.out.println("Litera nie znajduje się w imieniu do odgadnięcia");
+        //System.out.println("Litera nie znajduje się w imieniu do odgadnięcia");
         wisielecFrame.textField.setText("");
         wrongAnswerCheck(wrongAnswerCounter++);
     }
  }
 }}
+public void correctAnswerCheck(int correctAnswerCounter){
+        if(correctAnswerCounter==wordToGuess.length()){
+            new WisielecWinFrame();
+            chanceToGuess = false;
+        }
+    }
 public void wrongAnswerCheck(int wrongAnswerCounter){
-    if(wrongAnswerCounter>2){
-        System.out.println("wrongAnswerCounter" + wrongAnswerCounter);
-        System.out.println("Przegrałeś!!!");
+        if(wrongAnswerCounter==1){
+        wisielecFrame.centralLabel1.setText("Podana litera jest nieprawidłowa. Zostały Ci jeszce dwie próby");
+        }
+
+        if(wrongAnswerCounter==2){
+        wisielecFrame.centralLabel1.setText("Podana litera jest nieprawidłowa. Została Ci ostatnia próba");
+        }
+
+        if(wrongAnswerCounter==3){
+        wisielecFrame.centralLabel1.setText("Przegrałeś!!! :P   Spróbuj jeszcze raz :)");
         chanceToGuess = false;
     }
 }

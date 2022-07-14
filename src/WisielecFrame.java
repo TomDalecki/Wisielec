@@ -54,14 +54,4 @@ public WisielecFrame() {
     frame.add(mainContainer);
     frame.setVisible(true);
     }
-
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//
-//    }
-
-
-
-
-
 }
