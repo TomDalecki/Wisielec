@@ -11,8 +11,10 @@ WisielecFrame wisielecFrame = new WisielecFrame();
 String[][] wordsBase = {{"Zoya"}, {"Norek"}, {"Frida"}, {"Louis"}, {"Pedro"}};
 String wordToGuess;
 String wordToGuessLowCa;
+boolean chanceToGuess = true;
+int wrongAnswerCounter= 1;
 
-public void wisielecEngine(){
+    public void wisielecEngine(){
     try {
         Thread.sleep(1000);
     } catch (InterruptedException e) {
@@ -46,27 +48,41 @@ public void wordDraw(){
     System.out.println(wordToGuess);
 }
 public void wordGuessing() {
-    String letterChosen = wisielecFrame.textField.getText();
 
+if (chanceToGuess){
+    String letterChosen = wisielecFrame.textField.getText();
+ if(!letterChosen.equals("")){
     if (wordToGuessLowCa.contains(letterChosen)) {
         System.out.println("Świetnie!, litera znajduje się w imieniu do odgadnięcia");
         wisielecFrame.textField.setText("");
 
         for (int i = 0; i<lettersFromWordToGuess.size(); i++) {
-
             if (letterChosen.equals(Character.toString(lettersFromWordToGuess.get(i)))){
                 lettersGuessed.set(i, letterChosen);
             }
         }
-        wisielecFrame.centralLabel2.setText(toString());
+        wisielecFrame.centralLabel2.setText(printArray());
 
     } else {
         System.out.println("Litera nie znajduje się w imieniu do odgadnięcia");
         wisielecFrame.textField.setText("");
+        wrongAnswerCheck(wrongAnswerCounter++);
+    }
+ }
+}}
+public void wrongAnswerCheck(int wrongAnswerCounter){
+    if(wrongAnswerCounter>2){
+        System.out.println("wrongAnswerCounter" + wrongAnswerCounter);
+        System.out.println("Przegrałeś!!!");
+        chanceToGuess = false;
     }
 }
-public String toString(){
-  return String.valueOf(lettersGuessed);
+public String printArray(){
+    String temp = "";
+    for(int i=0; i<lettersGuessed.size(); i++){
+    temp = temp + lettersGuessed.get(i) + "   ";
+    }
+    return temp;
 }
     @Override
     public void actionPerformed(ActionEvent e) {

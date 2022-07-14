@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a411d6c7-09b9-492e-b8c6-a29b93f23cf4" name="Changes" comment="Commit4">
+    <list default="true" id="a411d6c7-09b9-492e-b8c6-a29b93f23cf4" name="Changes" comment="Commit5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WisielecEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WisielecEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WisielecFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WisielecFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657754172647</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit5">
+      <created>1657756754437</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657756754437</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +119,7 @@
     <MESSAGE value="Commit2" />
     <MESSAGE value="Commit3" />
     <MESSAGE value="Commit4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit4" />
+    <MESSAGE value="Commit5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit5" />
   </component>
 </project>
