@@ -1,3 +1,5 @@
+package defoult;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +12,7 @@ public class WisielecWinFrame extends JFrame implements ActionListener {
 
 public WisielecWinFrame(){
     frame.setTitle("Gra Wisielec");
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     frame.setSize(400, 150);
     frame.setLocation(150, 300);
 
@@ -28,5 +30,10 @@ public WisielecWinFrame(){
     @Override
     public void actionPerformed(ActionEvent e) {
     frame.setVisible(false);
+    }
+
+    static class Wisielce {
+        public static Image wisielec1 = new ImageIcon("wisielec1.png").getImage();
+        public static Image wisielec2 = new ImageIcon("wisielec2.png").getImage();
     }
 }

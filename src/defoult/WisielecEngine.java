@@ -1,3 +1,7 @@
+package defoult;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -8,14 +12,13 @@ Random randomWord = new Random();
 ArrayList<Character> lettersFromWordToGuess = new ArrayList<>();
 ArrayList<String> lettersGuessed = new ArrayList<>();
 WisielecFrame wisielecFrame = new WisielecFrame();
-    String[][] wordsBase = {{"ab"}};
-//String[][] wordsBase = {{"Zoya"}, {"Norek"}, {"Frida"}, {"Louis"}, {"Pedro"}};
+//String[][] wordsBase = {{"ab"}};
+String[][] wordsBase = {{"Zoya"}, {"Norek"}, {"Frida"}, {"Louis"}, {"Pedro"}};
 String wordToGuess;
 String wordToGuessLowCa;
 boolean chanceToGuess = true;
 int wrongAnswerCounter = 1;
 int correctAnswerCounter = 1;
-
     public void wisielecEngine(){
     try {
         Thread.sleep(1000);
@@ -24,7 +27,7 @@ int correctAnswerCounter = 1;
     }
     wordDraw();
 
-    wisielecFrame.centralLabel1.setText("Imię zwierzaka do odgadnięcia składa się z " + wordToGuess.length() + " liter.");
+    wisielecFrame.centralLabel1.setText("Imię zwierzaka - składa się z " + wordToGuess.length() + " liter.");
 
     if (wordToGuess.length() == 3){
         wisielecFrame.centralLabel2.setText("_   _   _");}
@@ -62,12 +65,11 @@ if (chanceToGuess){
         for (int i = 0; i<lettersFromWordToGuess.size(); i++) {
             if (letterChosen.equals(Character.toString(lettersFromWordToGuess.get(i)))){
                 lettersGuessed.set(i, letterChosen);
+                correctAnswerCheck(correctAnswerCounter++);
             }
         }
         wisielecFrame.centralLabel2.setText(printArray());
-        correctAnswerCheck(correctAnswerCounter++);
-
-    } else {
+    }   else {
         //System.out.println("Litera nie znajduje się w imieniu do odgadnięcia");
         wisielecFrame.textField.setText("");
         wrongAnswerCheck(wrongAnswerCounter++);
@@ -83,17 +85,58 @@ public void correctAnswerCheck(int correctAnswerCounter){
 public void wrongAnswerCheck(int wrongAnswerCounter){
         if(wrongAnswerCounter==1){
         wisielecFrame.centralLabel1.setText("Podana litera jest nieprawidłowa. Zostały Ci jeszce dwie próby");
+        wrongAnswerImage(1);
         }
 
         if(wrongAnswerCounter==2){
         wisielecFrame.centralLabel1.setText("Podana litera jest nieprawidłowa. Została Ci ostatnia próba");
+        wrongAnswerImage(2);
         }
 
         if(wrongAnswerCounter==3){
         wisielecFrame.centralLabel1.setText("Przegrałeś!!! :P   Spróbuj jeszcze raz :)");
+        wrongAnswerImage(3);
         chanceToGuess = false;
     }
 }
+public void wrongAnswerImage(int wrongAnswerCounter){
+
+ ImageIcon wisielecImg = null;
+    if(wrongAnswerCounter==1) {
+        wisielecImg = new ImageIcon("wisielec1.png");
+        wisielecFrame.rightLabel.setIcon(wisielecImg);
+        wisielecFrame.rightPanel.add(wisielecFrame.rightLabel);
+    }
+    if(wrongAnswerCounter==2) {
+        wisielecImg = new ImageIcon("wisielec2.png");
+        wisielecFrame.rightLabel.setIcon(wisielecImg);
+        wisielecFrame.rightPanel.add(wisielecFrame.rightLabel);
+    }
+    if(wrongAnswerCounter==3){
+        wisielecImg = new ImageIcon("wisielec3.png");
+        wisielecFrame.rightLabel.setIcon(wisielecImg);
+        wisielecFrame.rightPanel.add(wisielecFrame.rightLabel);
+        wisielecFrame.rightPanel.setBackground(Color.red);
+
+
+//        for (int i = 0; i<10; i++){ //to ma spowodować miganie tła
+//            int waitTime = 5;
+//            wisielecFrame.rightPanel.setBackground(Color.red);
+//            try {
+//                Thread.sleep(waitTime);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//            wisielecFrame.rightPanel.setBackground(Color.white);
+//            try {
+//                Thread.sleep(waitTime);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+
+    }
+ }
 public String printArray(){
     String temp = "";
     for(int i=0; i<lettersGuessed.size(); i++){

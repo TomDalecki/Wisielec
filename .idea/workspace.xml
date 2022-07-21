@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a411d6c7-09b9-492e-b8c6-a29b93f23cf4" name="Changes" comment="Commit6">
-      <change afterPath="$PROJECT_DIR$/src/WisielecWinFrame.java" afterDir="false" />
+    <list default="true" id="a411d6c7-09b9-492e-b8c6-a29b93f23cf4" name="Changes" comment="Commit7">
+      <change afterPath="$PROJECT_DIR$/Frida.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wisielec1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wisielec2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wisielec3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WisielecEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WisielecEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WisielecFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WisielecFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WisielecEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/WisielecEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WisielecFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/WisielecFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WisielecWinFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/WisielecWinFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +46,26 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo2/IdeaProjects/Wisielec/Graphics&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo2\IdeaProjects\Wisielec\Graphics" />
+      <recent name="C:\Users\Lenovo2\IdeaProjects\Wisielec\.idea" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo2\IdeaProjects\Wisielec" />
+      <recent name="C:\Users\Lenovo2\IdeaProjects\Wisielec\src\defoult" />
+      <recent name="C:\Users\Lenovo2\IdeaProjects\Wisielec\src" />
+      <recent name="C:\Users\Lenovo2\IdeaProjects\Wisielec\out\production\Wisielec" />
+      <recent name="C:\Users\Lenovo2\IdeaProjects\Wisielec\Graphics" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="defoult.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="defoult.Main" />
       <module name="Wisielec" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -54,7 +73,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.defoult.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657807346537</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit7">
+      <created>1657834619305</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657834619305</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,7 +143,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="REGEX" value="true" />
+                  <option name="MATCH_CASE" value="true" />
+                </TextFilterSettings>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -130,6 +163,7 @@
     <MESSAGE value="Commit4" />
     <MESSAGE value="Commit5" />
     <MESSAGE value="Commit6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit6" />
+    <MESSAGE value="Commit7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit7" />
   </component>
 </project>
