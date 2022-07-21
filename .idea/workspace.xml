@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a411d6c7-09b9-492e-b8c6-a29b93f23cf4" name="Changes" comment="Commit7">
-      <change afterPath="$PROJECT_DIR$/Frida.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wisielec1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wisielec2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wisielec3.png" afterDir="false" />
+    <list default="true" id="a411d6c7-09b9-492e-b8c6-a29b93f23cf4" name="Changes" comment="Commit8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WisielecEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/WisielecEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WisielecFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/WisielecFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WisielecWinFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/WisielecWinFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/defoult/WisielecEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/defoult/WisielecEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657834619305</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit8">
+      <created>1658413337639</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658413337639</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +164,7 @@
     <MESSAGE value="Commit5" />
     <MESSAGE value="Commit6" />
     <MESSAGE value="Commit7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit7" />
+    <MESSAGE value="Commit8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit8" />
   </component>
 </project>

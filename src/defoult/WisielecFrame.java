@@ -2,9 +2,6 @@ package defoult;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.Graphics;
-import java.awt.Image;
-
 public class WisielecFrame extends JFrame {
     JFrame frame = new JFrame();
     JPanel topPanel = new JPanel();
@@ -17,11 +14,6 @@ public class WisielecFrame extends JFrame {
     JTextField textField = new JTextField();
     JButton button = new JButton("OK");
     ImageIcon icon = new ImageIcon("Frida.jpg");
-//    ImageIcon wisielecImg1 = new ImageIcon("wisielec1.png");
-//    ImageIcon wisielecImg2 = new ImageIcon("wisielec2.png");
-//    ImageIcon wisielecImg3 = new ImageIcon("wisielec3.png");
-
-
 public WisielecFrame() {
     frame.setTitle("Gra Wisielec");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -70,13 +62,3 @@ public WisielecFrame() {
     frame.setVisible(true);
     }
 }
-//class WisielecImages extends JPanel {
-//    Image wisielecImg1 = new ImageIcon("wisielec1.png").getImage();
-//    Image wisielecImg2 = new ImageIcon("wisielec2.png").getImage();
-//    Image wisielecImg3 = new ImageIcon("wisielec3.png").getImage();
-//    public void paint (Graphics g){
-//        Graphics2D g2D = (Graphics2D) g;
-//        g2D.drawImage(wisielecImg1, 0, 0, 500, 500, null);
-//
-//    }
-//}

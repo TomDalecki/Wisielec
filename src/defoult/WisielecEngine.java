@@ -101,7 +101,7 @@ public void wrongAnswerCheck(int wrongAnswerCounter){
 }
 public void wrongAnswerImage(int wrongAnswerCounter){
 
- ImageIcon wisielecImg = null;
+ ImageIcon wisielecImg;
     if(wrongAnswerCounter==1) {
         wisielecImg = new ImageIcon("wisielec1.png");
         wisielecFrame.rightLabel.setIcon(wisielecImg);
@@ -117,32 +117,14 @@ public void wrongAnswerImage(int wrongAnswerCounter){
         wisielecFrame.rightLabel.setIcon(wisielecImg);
         wisielecFrame.rightPanel.add(wisielecFrame.rightLabel);
         wisielecFrame.rightPanel.setBackground(Color.red);
-
-
-//        for (int i = 0; i<10; i++){ //to ma spowodować miganie tła
-//            int waitTime = 5;
-//            wisielecFrame.rightPanel.setBackground(Color.red);
-//            try {
-//                Thread.sleep(waitTime);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//            wisielecFrame.rightPanel.setBackground(Color.white);
-//            try {
-//                Thread.sleep(waitTime);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }
-
     }
  }
 public String printArray(){
-    String temp = "";
-    for(int i=0; i<lettersGuessed.size(); i++){
-    temp = temp + lettersGuessed.get(i) + "   ";
+    StringBuilder temp = new StringBuilder();
+    for (String s : lettersGuessed) {
+        temp.append(s).append("   ");
     }
-    return temp;
+    return temp.toString();
 }
     @Override
     public void actionPerformed(ActionEvent e) {
