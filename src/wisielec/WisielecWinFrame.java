@@ -1,4 +1,4 @@
-package defoult;
+package wisielec;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,10 +30,5 @@ public WisielecWinFrame(){
     @Override
     public void actionPerformed(ActionEvent e) {
     frame.setVisible(false);
-    }
-
-    static class Wisielce {
-        public static Image wisielec1 = new ImageIcon("wisielec1.png").getImage();
-        public static Image wisielec2 = new ImageIcon("wisielec2.png").getImage();
     }
 }

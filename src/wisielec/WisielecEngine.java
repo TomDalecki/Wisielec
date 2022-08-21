@@ -1,4 +1,4 @@
-package defoult;
+package wisielec;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,17 +8,19 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class WisielecEngine implements ActionListener {
-Random randomWord = new Random();
-ArrayList<Character> lettersFromWordToGuess = new ArrayList<>();
-ArrayList<String> lettersGuessed = new ArrayList<>();
+    private String wordToGuess;
+    private String wordToGuessLowCa;
+    private boolean chanceToGuess = true;
+    private int wrongAnswerCounter = 1;
+    private int correctAnswerCounter = 1;
+
+    Random randomWord = new Random();
+    ArrayList<Character> lettersFromWordToGuess = new ArrayList<>();
+    ArrayList<String> lettersGuessed = new ArrayList<>();
+    String[][] wordsBase = {{"Zoya"}, {"Norek"}, {"Frida"}, {"Louis"}, {"Pedro"}};
+
+
 WisielecFrame wisielecFrame = new WisielecFrame();
-//String[][] wordsBase = {{"ab"}};
-String[][] wordsBase = {{"Zoya"}, {"Norek"}, {"Frida"}, {"Louis"}, {"Pedro"}};
-String wordToGuess;
-String wordToGuessLowCa;
-boolean chanceToGuess = true;
-int wrongAnswerCounter = 1;
-int correctAnswerCounter = 1;
     public void wisielecEngine(){
     try {
         Thread.sleep(1000);

@@ -1,4 +1,4 @@
-package defoult;
+package wisielec;
 
 import javax.swing.*;
 import java.awt.*;
@@ -49,7 +49,6 @@ public WisielecFrame() {
     centralPanel.add(centralLabel2);
     centralPanel.add(textField);
     centralPanel.add(button);
-    //button.addActionListener(this);
     mainContainer.add(centralPanel);
 
     // Right Panel

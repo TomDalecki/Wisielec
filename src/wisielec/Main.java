@@ -1,4 +1,4 @@
-package defoult;
+package wisielec;
 
 public class Main {
     public static void main(String[] args) {
